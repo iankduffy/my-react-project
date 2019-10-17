@@ -1,0 +1,12 @@
+.u-t-cen {
+  text-align: center;
+}
+
+%u-t-cen\@md,
+.u-t-cen\@md {
+  @include breakpoint-max(md) {
+    &{
+      text-align: center;
+    }
+  }
+}

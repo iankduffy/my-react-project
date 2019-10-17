@@ -1,0 +1,43 @@
+.c-screen {
+  min-height: 80vh;
+  &-intro {
+    background: {
+      image: url("../assets/Hunters-Background.png");
+      size: cover;
+      position: bottom; 
+    }
+    display: block;
+    width: 100%;
+    position: relative;
+
+    &:after {
+      content: ""; 
+      position: absolute; 
+      left: 0; 
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      background-color: transparentize($primary-color, 0.3);
+      z-index: 1;
+    }
+
+    > div {
+      position: relative; 
+      z-index: 2;
+      color: $white;
+    }
+  }
+
+  &--purple {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  &--pink {
+    background-color: $secondary-color;
+  }
+
+  &--grey {
+    background-color: $grey-color;
+  }
+}

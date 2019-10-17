@@ -1,0 +1,40 @@
+.c-btn {
+  display: block;
+  padding: 10px 10px; 
+  // background: $primary-color;
+  color: $white;
+  cursor: pointer;
+  align-self: flex-end;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 5px solid $primary-color; 
+
+  &:hover{
+    background: transparentize($primary-color, 0.1)
+  }
+
+  &--container {
+    display: flex;
+    justify-content: space-between;
+  
+
+    > .c-btn {
+      flex: 0 1 49%;
+    }
+
+    &--wrap {
+      display: flex; 
+      justify-content: center; 
+      flex-wrap: wrap;
+
+      > .c-btn {
+        flex: 0 1 30%;
+        margin: 10px 10px; 
+        @include breakpoint-max(md) {
+          flex: 0 1 45%;
+        }
+      }
+    }
+  }
+}
