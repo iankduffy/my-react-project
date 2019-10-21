@@ -1,11 +1,6 @@
 .c-screen {
   min-height: 80vh;
   &-intro {
-    background: {
-      image: url("../assets/Hunters-Background.png");
-      size: cover;
-      position: bottom; 
-    }
     display: block;
     width: 100%;
     position: relative;

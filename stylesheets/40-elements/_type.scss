@@ -42,3 +42,11 @@ h3,
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
+
+h4, 
+%h4, 
+.h4 {
+  font-size: $heading-size-4; 
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}

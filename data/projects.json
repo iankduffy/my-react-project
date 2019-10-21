@@ -2,31 +2,37 @@
 	{
 		"id": 0,
 		"projectName": "Product Listing", 
-		"description": "Number 1"
+		"description": "Number 1", 
+		"href": "product"
 	}, 
 	{
 		"id": 1,
-		"projectName": "Checkout Experence", 
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+		"projectName": "Checkout Experience", 
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur", 
+		"href": "checkout-experience"
 	},
 	{
 		"id": 2,
 		"projectName": "Weather App", 
-		"description": "Number 3"
+		"description": "Number 3", 
+		"href": "weather-app"
 	},
 	{
 		"id": 3,
 		"projectName": "Slack Remake", 
-		"description": "Number 4" 
+		"description": "Number 4", 
+		"href": "slack-remake"
 	},
 	{
 		"id": 4,
 		"projectName": "Workout Instructions", 
-		"description": "Number 5"
+		"description": "Number 5", 
+		"href": "workout-instructions"
 	},
 	{
 		"id": 5,
-		"projectName": "Product Listing", 
-		"description": "Number 6" 
+		"projectName": "Marvel Superheros", 
+		"description": "Number 6", 
+		"href": "marvel-superheros"
 	}
 ]
