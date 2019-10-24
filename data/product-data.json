@@ -2,48 +2,65 @@
 	{
 		"id": 0,
 		"productName": "Random Product 1", 
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+		"price": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "/example.png", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	}, 
 	{
 		"id": 1,
 		"productName": "Checkout Experience", 
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur", 
-		"href": "checkout-experience"
+		"price": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	},
 	{
 		"id": 2,
 		"productName": "Checkout Experience", 
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-		"href": "weather-app"
+		"price": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	},
 	{
 		"id": 3,
 		"productName": "Checkout Experience", 
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-		"href": "slack-remake"
+		"price": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	},
 	{
 		"id": 4,
 		"productName": "Checkout Experience", 
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-		"href": "workout-instructions"
+		"price": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	},
 	{
 		"id": 5,
 		"productName": "Checkout Experience", 
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-		"href": "marvel-superheros"
+		"href": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	},
 	{
 		"id": 6,
 		"productName": "Checkout Experience", 
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-		"href": "marvel-superheros"
+		"price": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	},
 	{
 		"id": 7,
 		"productName": "Checkout Experience", 
 		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-		"href": "marvel-superheros"
+		"price": "£5.00",
+		"rating": 4,
+		"productImages": ["/example-image.jpg", "https://www.iankduffy.com/assets/About-Me-Photo.jpg"]
 	}
 ]

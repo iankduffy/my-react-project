@@ -30,7 +30,7 @@
   }
 
   &--space-between{
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 
@@ -52,4 +52,12 @@
       }
     }
   }
+}
+
+.o-flex-al-stretch {
+  align-items: stretch;
+}
+
+.o-flex-al-self-bottom {
+  align-self: flex-end;
 }

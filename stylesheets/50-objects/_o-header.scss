@@ -1,5 +1,20 @@
 header {
   width: 100%; 
-  background: $primary-color;
-  color: #fff; 
+  position: relative;
+
+  &.header--default {
+    background: $primary-color;
+    color: #fff;
+  }
+
+  &.header--store {
+    background: $white;
+    color: $black;
+    border-top: 15px solid $black;
+  }
+  & .header{
+    &__logo{
+      height: 60px;
+    }
+  }
 }

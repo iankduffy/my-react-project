@@ -36,3 +36,15 @@
     background-color: $grey-color;
   }
 }
+
+.c-profile-pic {
+  background-image: url(/profile-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  border: #fff 10px solid;
+  text-transform: uppercase;
+}
