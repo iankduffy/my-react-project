@@ -39,3 +39,16 @@
     color: $primary-color;
   }
 }
+
+.c-star {
+  padding: 0 2px;
+  svg {
+    stroke: $grey-color;
+  }
+
+  &--active {
+    svg {
+      fill: goldenrod;
+    }
+  }
+}

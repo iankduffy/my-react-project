@@ -6,6 +6,10 @@
   text-align: right;
 }
 
+.u-mar-t-auto {
+  margin-top: auto;
+}
+
 %u-t-cen\@md,
 .u-t-cen\@md {
   @include breakpoint-max(md) {
@@ -17,4 +21,12 @@
 
 .u-flex-self--end {
   align-self: flex-end
+}
+
+.u-pos-rel {
+  position: relative;
+}
+
+.u-t-b{
+  font-weight: 800;
 }

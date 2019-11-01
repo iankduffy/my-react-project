@@ -8,7 +8,7 @@ const ProductLink = (props) => (
       <img src={props.product.productImages[0]} className="u-mar-sm"></img>
       <h4 className="c-product__title">{props.product.productName}</h4>
       <p className="c-product__price">Product Price</p>
-      <Ratings productRating={props.product.rating}/>
+      <Ratings productRating={props.product.rating} maxStars={5}/>
       <button className="c-product__btn">View Product</button>
     </a>
   </Link>
