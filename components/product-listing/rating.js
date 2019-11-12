@@ -8,7 +8,7 @@ const Ratings = (props) => {
     <div>
       <div className="container container__row container--center u-mar-b-sm">
         { Array.from(Array(maxStars)).map((star, i) => { 
-          return <div className={`c-star ${i < rating ? 'c-star--active' : ''}`}><Star /></div>
+          return <div className={`c-star ${i < rating ? 'c-star--active' : ''}`} key={i}><Star /></div>
         })}
       </div>
     </div>

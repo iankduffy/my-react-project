@@ -5,7 +5,7 @@ import { CartContextProvider } from '../components/product-listing/context/cart-
 class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
-
+    
     return (
       <div> 
         <CartContextProvider>

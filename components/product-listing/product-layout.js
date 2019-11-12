@@ -1,6 +1,6 @@
 // import Link from 'next/link'
 import Head from 'next/head'
-import { CartContextProvider } from '../../components/product-listing/context/cart-context';
+// import { CartContextProvider } from '../../components/product-listing/context/cart-context';
 import Header from '../../components/product-listing/header'
 
 
@@ -11,9 +11,9 @@ export default ({ children, title = 'Product Pages' }) => (
       <meta charSet='utf-8' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
     </Head>
-    <body>
+    <div className="u-bg-grey">
       <Header />
       {children}
-    </body>
+    </div>
   </div>
 )
