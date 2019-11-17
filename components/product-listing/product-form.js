@@ -10,7 +10,6 @@ const ProductForm = (props) => {
   const [state, setState] = useContext(CartContext);
   const [wishlist, setWishlist] = useContext(WishlistContext);
   let selectedQTY = 1
-
   let alreadyInCart = state.cart.find((cartItem) => cartItem.productId === product.id)
 
   let addToCart = () => {
@@ -39,15 +38,12 @@ const ProductForm = (props) => {
 
   let addToWishlist = () => {
 
-    let newProduct = {
-      productId: props.product.id
-    }
+    console.log(wishlist)
+    // console.log({newProduct})
 
+    setWishlist({wishlist: [1]})
+    // Cookies.set('wishlist', [wishlist, 1])
     console.log({wishlist})
-    console.log({newProduct})
-
-    setWishlist({wishlist: [...wishlist, newProduct]})
-    Cookies.set('wishlist', {wishlist: [...wishlist, newProduct]})
   }
 
   return (
