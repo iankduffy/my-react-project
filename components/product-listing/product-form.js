@@ -2,17 +2,19 @@ import { useContext, useState } from 'react';
 import { CartContext } from './context/cart-context'
 import DropDown from "../dropdown-input"
 import Cookies from 'js-cookie' 
+import { WishlistContext } from '../../components/product-listing/context/Wishlist-context'
+
 
 const ProductForm = (props) => {
   const product = props.product; 
   const [state, setState] = useContext(CartContext);
-  // let [QTY, setQTY] = useState(1);
+  const [wishlist, setWishlist] = useContext(WishlistContext);
   let selectedQTY = 1
 
   let alreadyInCart = state.cart.find((cartItem) => cartItem.productId === product.id)
 
   let addToCart = () => {
-    console.log({alreadyInCart})
+    console.log({state})
     if (alreadyInCart) {
       console.log("in cart")
       mergeItem(alreadyInCart)
@@ -29,12 +31,23 @@ const ProductForm = (props) => {
 
   let mergeItem = (cartItem) => {
     console.log(cartItem)
-    cartItem.qty = cartItem.qty + selectedQTY
-
-    console.log(selectedQTY)
-
+    cartItem.qty = Math.min((cartItem.qty + selectedQTY), 12)
+    console.log(cartItem.qty)
     setState({cart: [...state.cart]})
     Cookies.set('cart', {cart: [...state.cart]})
+  }
+
+  let addToWishlist = () => {
+
+    let newProduct = {
+      productId: props.product.id
+    }
+
+    console.log({wishlist})
+    console.log({newProduct})
+
+    setWishlist({wishlist: [...wishlist, newProduct]})
+    Cookies.set('wishlist', {wishlist: [...wishlist, newProduct]})
   }
 
   return (
@@ -49,7 +62,7 @@ const ProductForm = (props) => {
           <button className="c-btn-product c-btn--dark" onClick={() => addToCart()}>Add To Bag</button>
         </div>
         <div className="col-3">
-          <button className="c-btn-product" onClick={() => {console.log("save for later")}}>Save For Later</button>
+          <button className="c-btn-product" onClick={() => addToWishlist()}>Save For Later</button>
         </div>
       </div>
     </div>

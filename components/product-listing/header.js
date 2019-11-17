@@ -12,14 +12,15 @@ const Header = (props) => {
   return (
     <header className="u-pad-t-sm header--store">
       <div className="container container__row  container__row--v-center container--space-between">
-        <h1 className="h3 u-pad-b-md">Beer Shop Name</h1>
+        <h1 className="h3 u-pad-b-sm">Beer Shop Name</h1>
         <nav className="col-8 u-flex-self--end">
           <ul className="o-nav o-nav--store container container__row">
-            <li className="u-pad-h-md o-nav__link">Home</li>
-            <li className="u-pad-h-md o-nav__link">Menu Item</li>
-            <li className="u-pad-h-md o-nav__link">Menu Item</li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing"}} as={`/product-listing`}>Home</Link></li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/category/[pid]"}} as={`/product-listing/category/all`}><a>Category</a></Link></li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/category/[pid]"}} as={`/product-listing/category/all`}><a>Category</a></Link></li>
             <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/category/[pid]"}} as={`/product-listing/category/all`}><a>All</a></Link></li>
-            <li className="u-pad-h-md o-nav__link u-pos-rel u-t-cen" onMouseEnter={() => {newMinibagVisable(true)}} onMouseLeave={() => {newMinibagVisable(false)}}>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/wishlist"}}><a>Wishlist</a></Link></li>
+            <li className="u-pad-h-md u-pad-v-sm o-nav__link u-pos-rel u-t-cen" onMouseEnter={() => {newMinibagVisable(true)}} onMouseLeave={() => {newMinibagVisable(false)}}>
               <h4>MiniBag</h4>
              <div>{state.cart.length}</div>
               {minibagVisable ? <MiniBag cart={state.cart}/> : "" }

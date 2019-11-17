@@ -1,5 +1,6 @@
 const DropDown = (props) => {
   let inputDetails = props.optionsValue
+  
   return (
     <label htmlFor={props.text}>
       <select defaultValue={props.defaultValue} name={props.text} className="o-select" onChange={(e) => {props.setParentState(event.target.value)}}>

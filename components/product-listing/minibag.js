@@ -1,4 +1,4 @@
-import Link from 'next/link'
+// import Link from 'next/link'
 import MiniBagItem from '../product-listing/minibag-item'
 import { useContext, useState } from 'react';
 import { CartContext } from './context/cart-context'

@@ -9,7 +9,7 @@ const ProductListing = () => (
 			<SideBar />
 			<div className="col-9 u-t-cen">
         <h2>Category</h2>
-          <div className="container container__row container--space-between o-flex-al-stretch">
+          <div className="container container__row o-flex-al-stretch">
             {ProductData.map(product => <ProductLink product={product} key={product.id}/>)}
           </div>
       </div>

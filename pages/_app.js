@@ -1,6 +1,7 @@
 import React from 'react'
 import App from 'next/app'
 import { CartContextProvider } from '../components/product-listing/context/cart-context';
+import { WishlistContextProvider } from '../components/product-listing/context/wishlist-context';
 
 class MyApp extends App {
   render() {
@@ -9,7 +10,9 @@ class MyApp extends App {
     return (
       <div> 
         <CartContextProvider>
-          <Component {...pageProps} />
+          <WishlistContextProvider>
+            <Component {...pageProps} />
+          </WishlistContextProvider>
         </CartContextProvider>
       </div>
     )

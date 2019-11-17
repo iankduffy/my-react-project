@@ -17,7 +17,6 @@
 
 img {
   max-width: 100%;
-  max-height: 100%;
 }
 
 button {
@@ -2924,14 +2923,18 @@ header .header__logo {
 }
 
 .o-nav--store li {
-  padding-top: 10px;
-  padding-bottom: 20px;
   cursor: pointer;
 }
 
 .o-nav--store li.o-nav__link {
   border-bottom: 5px solid #282828;
   margin: 0 5px;
+}
+
+.o-nav--store li.o-nav__link a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .o-nav--store li.o-nav__link:hover {
@@ -2962,7 +2965,7 @@ header .header__logo {
   height: 70vh;
   right: 0;
   background: #fff;
-  margin-top: 25px;
+  margin-top: 15px;
   color: #282828;
   cursor: auto;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
@@ -3245,9 +3248,9 @@ header .header__logo {
   text-decoration: none;
   color: #282828;
   background: #fff;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 20%;
-          flex: 1 1 20%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 23%;
+          flex: 0 1 23%;
   min-width: 200px;
 }
 
@@ -3327,6 +3330,10 @@ header .header__logo {
 
 .u-t-b {
   font-weight: 800;
+}
+
+.u-full-height {
+  min-height: 100vh;
 }
 
 .u-order-1 {
