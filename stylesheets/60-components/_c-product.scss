@@ -7,6 +7,13 @@
   flex: 0 1 23%;
   min-width: 200px;
 
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    height: 100%;
+  }
+
   img {
     width: 100%;
   } 
@@ -17,6 +24,7 @@
     padding: 8px;
     text-transform: uppercase;
     cursor: pointer;
+    margin-top: auto;
   }
 
   &:hover {

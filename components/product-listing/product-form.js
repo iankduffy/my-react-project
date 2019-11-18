@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { CartContext } from './context/cart-context'
 import DropDown from "../dropdown-input"
 import Cookies from 'js-cookie' 
-import { WishlistContext } from '../../components/product-listing/context/Wishlist-context'
+import { WishlistContext } from '../../components/product-listing/context/wishlist-context'
 
 
 const ProductForm = (props) => {

@@ -3,7 +3,7 @@ import DropDown from "../dropdown-input"
 import { useContext, useState } from 'react';
 import { CartContext } from './context/cart-context'
 import Cookies from 'js-cookie';
-import { WishlistContext } from '../../components/product-listing/context/Wishlist-context'
+import { WishlistContext } from '../../components/product-listing/context/wishlist-context'
 
 const MiniBagItem = (props) => {
   const product = ProductData[props.product.productId]

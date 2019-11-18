@@ -3254,6 +3254,20 @@ header .header__logo {
   min-width: 200px;
 }
 
+.c-product a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  height: 100%;
+}
+
 .c-product img {
   width: 100%;
 }
@@ -3264,6 +3278,7 @@ header .header__logo {
   padding: 8px;
   text-transform: uppercase;
   cursor: pointer;
+  margin-top: auto;
 }
 
 .c-product:hover {

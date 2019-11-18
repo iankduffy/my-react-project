@@ -1,13 +1,29 @@
 const fs = require('fs');
+var loremHipsum = require('lorem-hipsum')
 
-// const exampleData = {
-//   "id": 0,
-//   "productName": "Beer Name", 
-//   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-//   "price": "£5.00",
-//   "rating": 1,
-//   "productImages": ["/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png"]
-// }
+const title = () => 
+  loremHipsum({
+  count: 2,                      // Number of words, sentences, or paragraphs to generate.
+  units: 'words',
+  sentenceLowerBound: 5,         // Minimum words per sentence.
+  sentenceUpperBound: 15,        // Maximum words per sentence.
+  paragraphLowerBound: 3,        // Minimum sentences per paragraph.
+  paragraphUpperBound: 7,        // Maximum sentences per paragraph.
+  format: 'plain',               // Plain text or html// Custom word dictionary. Uses dictionary.words (in lib/dictionary.js) by default.,
+  random: Math.random
+})
+
+const paragraph = () => 
+  loremHipsum({
+  count: 4,                      // Number of words, sentences, or paragraphs to generate.
+  units: 'sentence',
+  sentenceLowerBound: 5,         // Minimum words per sentence.
+  sentenceUpperBound: 15,        // Maximum words per sentence.
+  paragraphLowerBound: 3,        // Minimum sentences per paragraph.
+  paragraphUpperBound: 7,        // Maximum sentences per paragraph.
+  format: 'plain',               // Plain text or html// Custom word dictionary. Uses dictionary.words (in lib/dictionary.js) by default.,
+  random: Math.random
+})
 
 const AMMOUNTOFPRODUCTS = 21
 
@@ -24,12 +40,12 @@ const writeFile = () => {
 })};
 
 const createProductData = () => {
-  for(let i = 1; i < AMMOUNTOFPRODUCTS; i++) {
+  for(let i = 0; i < AMMOUNTOFPRODUCTS; i++) {
     let data = {
       id: i, 
-      productName: `BEER ${i}`, 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-      breweryInfo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+      productName: title(), 
+      description: paragraph(),
+      breweryInfo: paragraph(),
       price: "£5.00",
       rating: Math.floor(Math.random() * (5 - 0) + 0), 
       productImages: ["/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png"],
