@@ -1,7 +1,7 @@
 import { signInWithGoogle } from '../../lib/firebase/firebase'
 import FormInput from '../form-input'
-import { useState, useContext } from 'react';
-// import { auth } from '../../lib/firebase/firebase'
+import { useState, useContext, useEffect } from 'react';
+import { auth } from '../../lib/firebase/firebase'
 import { UserContext } from '../product-listing/user-context'
 
 const SigninForm = () => {
@@ -18,7 +18,27 @@ const SigninForm = () => {
 	const handlePassword = (event) => {
 		const { value, name } = event.target;
 		setPassword(value)
+		console.log({currentUser})
 	}
+
+	// useEffect(() => {
+  //   const unsubscribe = onAuthStateChange();
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
+
+	// function onAuthStateChange() {
+	// 	return auth.onAuthStateChanged(user => {
+	// 		if (user) {
+	// 			setUser(user)
+	// 			console.log("The user is logged in");
+	// 		} else {
+	// 			setUser('')
+	// 			console.log("The user is not logged in");
+	// 		}
+	// 	});
+	// }
 
 	return(
 		<div className="col-6">
@@ -38,7 +58,6 @@ const SigninForm = () => {
 			required />
 			<button className="c-btn-category col-4">Set Email</button>
       <button className="c-btn-category col-4" onClick={signInWithGoogle}>Sign In With Google</button>
-			{ currentUser ? "Exists" : 'N/a' }
 		</div>
 	)
 };

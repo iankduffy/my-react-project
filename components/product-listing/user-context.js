@@ -5,7 +5,7 @@ import { auth } from '../../lib/firebase/firebase'
 export const UserContext = createContext([{}, () => {}]);
 
 export const UserContextProvider = (props) => {
-  const [currentUser, setUser] = useState( props.user || null );
+  const [currentUser, setUser] = useState(props.currentUser);
   
   return (
     <UserContext.Provider value={[currentUser, setUser]}>

@@ -15,25 +15,25 @@ class MyApp extends App {
     }
   }
 
-  unsubscribeFromAuth = null
+  // unsubscribeFromAuth = null
 
-  componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user })
-      console.log({user})
-    })
-  }
+  // componentDidMount() {
+  //  auth.onAuthStateChanged(user => {
+  //     this.setState({ currentUser: user })
+  //     console.log({user})
+  //   })
+  // }
 
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
+  // componentWillUnmount() {
+  //   this.unsubscribeFromAuth();
+  // }
 
   render() {
     const { Component, pageProps } = this.props
     
     return (
       <div> 
-        <UserContextProvider user={this.state.currentUser}>
+        <UserContextProvider>
           <CartContextProvider>
             <WishlistContextProvider>
               <Component {...pageProps} />

@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { CartContext } from './context/cart-context';
 import MiniBag from './minibag';
 import Link from 'next/link'
@@ -12,6 +12,8 @@ const Header = (props) => {
 
   let [minibagVisable, newMinibagVisable] = useState(minbagVisable)
   // console.log(cart.product)
+
+  console.log(currentUser)
   return (
     <header className="u-pad-t-sm header--store">
       <div className="container container__row  container__row--v-center container--space-between">
@@ -29,7 +31,7 @@ const Header = (props) => {
               {minibagVisable ? <MiniBag cart={state.cart}/> : "" }
             </li>
             <li className="u-pad-h-md o-nav__link">
-              {currentUser ? <Link href={{pathname: "/sign-in"}}><a>Sign In</a></Link> : <div onClick={() => auth.signOut()}>Sign Out</div> }
+              {currentUser ? <div className="" onClick={() => auth().signOut()}>Sign Out</div> : <Link href={{pathname: "/sign-in"}}><a>Sign In</a></Link> }
             </li>
           </ul>
         </nav>
