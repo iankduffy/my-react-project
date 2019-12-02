@@ -1,13 +1,10 @@
-import Layout from '../../components/product-listing/product-layout'
+import Layout from '../components/product-listing/product-layout'
 import { useContext } from 'react';
-import ProductLink from "../../components/product-listing/product"
-import ProductData from "../../data/product-data"
-import { WishlistContext } from '../../components/product-listing/context/Wishlist-context'
-
-import "../../css/styles.css"
+import ProductLink from "../components/product-listing/product"
+import ProductData from "../data/product-data"
+import { WishlistContext } from '../components/product-listing/context/Wishlist-context'
 
 const ProductListing = () => {
-  // const product = ProductData[product.productId]
   const [wishlist, setWishlist] = useContext(WishlistContext);
 
 	return(

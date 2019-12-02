@@ -1,5 +1,5 @@
 const fs = require('fs');
-var loremHipsum = require('lorem-hipsum')
+const loremHipsum = require('lorem-hipsum')
 
 const title = () => 
   loremHipsum({

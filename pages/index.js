@@ -1,32 +1,45 @@
-import "../css/styles.css"
-import Project from "../components/c-projects"
-import ProjectData from "../data/projects"
-import ProfilePic from "../components/c-profile-pic"
+import Layout from '../components/product-listing/product-layout'
+import CategoryLink from '../components/product-listing/category-link'
+import ArticleLink from '../components/product-listing/article-link'
+import ProductData from "../data/product-data"
+import ProductLink from "../components/product-listing/product"
 
-
-const Index = () => (
+const ProductListing = () => (
 	<div>
-		<header className="u-pad-v-md header--default">
-			<div className="h3 container container__row container__row--v-center"><img src="/Logo.svg" className="header__logo u-mar-r-md" alt="ian duffy logo"/>Ian Duffy React Project</div></header>
-		<div className="c-screen-intro c-screen">
-			<div className="container container__row container__row--v-center c-screen u-t-cen@md"> 
-				<div className="col-5 container--center"><ProfilePic /></div>
-				<div className="col-7 col-12@md container container__column">
-					<h1>HI I AM IAN DUFFY</h1>
-					<p className="h2">I’M WEB DEVELOPER</p>
-					<p className="h3">THIS IS A NUMBER OF REACT PROJECTS BUILT TO HELP IMPROVE MY SKILLS AND SHOWCASE THEM USING NEXT.JS.</p>
-					<div className="container container__row u-mar-v-md">
-						<a className="c-btn col-3 u-mar-r-md" href="https://www.iankduffy.com/">My Website</a>
-						<a className="c-btn col-3 u-mar-r-md" href="https://github.com/iankduffy">My Github</a>
-						<a className="c-btn col-3 u-mar-r-md" href="https://github.com/iankduffy/my-react-project">Github Project</a>
+		<Layout title="Home Page | Product Listing">
+			<div className="u-bg-grey">
+				<main className="container__row">
+					<div className="col-12 c-header--image u-pad-v-lg">
+						<div className="container container__row">
+							<img className="col-6 col-12@md" src="Beer-Group.png" />
+							<div className="col-6 col-12@md u-pad-h-md"> 
+								<h1 className="u-mar-t-lg">Lorem ipsum dolor sit amet</h1>
+								<p className="h2">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div className="container container__row u-mar-v-lg">
-			{ProjectData.map(project => <Project project={project} key={project.id}/>)}
-		</div>
+					<div className="container col-8 col-12@md u-t-cen u-pad-t-lg u-pad-h-md">
+						<p className="u-t-cen h4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>			
+					</div>
+					<div className="container container__row u-t-cen u-pad-t-lg col-12">
+						<CategoryLink />
+						<CategoryLink />
+						<CategoryLink />
+					</div>
+					<div className="container u-pad-t-lg col-12">
+						<ArticleLink />
+						<ArticleLink className="u-flex--row-reverse u-t-r"/>
+					</div>
+					<div className="container u-pad-v-lg col-12 u-pad-h-md">
+						<h3>Top Sellers</h3>
+						<div className="container container__row container--space-between o-flex-al-stretch u-t-cen">
+            	{ProductData.slice(0, 8).map(product => <ProductLink product={product} key={product.id}/>)}
+          	</div>
+					</div>
+				</main>
+			</div> 
+		</Layout>
 	</div>
 );
   
-export default Index;
+export default ProductListing;

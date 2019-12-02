@@ -9,14 +9,14 @@ app.prepare()
 .then(() => {
   const server = express()
 
-  server.get('/product-listing/product/:id', (req, res) => {
-    const actualPage = `/product-listing/product/${req.params.id}`
+  server.get('/product/:id', (req, res) => {
+    const actualPage = `/product/${req.params.id}`
     const queryParams = { id: req.params.id } 
     app.render(req, res, actualPage, queryParams)
   })
 
-  server.get('/product-listing/category/:id', (req, res) => {
-    const actualPage = `/product-listing/category/${req.params.id}`
+  server.get('/category/:id', (req, res) => {
+    const actualPage = `/category/${req.params.id}`
     const queryParams = { id: req.params.id } 
     app.render(req, res, actualPage, queryParams)
   })

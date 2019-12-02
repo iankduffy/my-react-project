@@ -32,6 +32,10 @@ a {
   color: inherit;
 }
 
+html {
+  scroll-padding-top: 50px;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;

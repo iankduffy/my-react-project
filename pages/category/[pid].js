@@ -1,9 +1,6 @@
-import Layout from '../../../components/product-listing/product-layout'
-import ProductList from '../../../components/product-listing/productlist'
+import Layout from '../../components/product-listing/product-layout'
+import ProductList from '../../components/product-listing/productlist'
 import { useRouter } from 'next/router'
-
-
-import "../../../css/styles.css"
 
 const CategoryPage = () => {
   const router = useRouter()

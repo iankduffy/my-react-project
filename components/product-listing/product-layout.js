@@ -2,7 +2,7 @@
 import Head from 'next/head'
 // import { CartContextProvider } from '../../components/product-listing/context/cart-context';
 import Header from '../../components/product-listing/header'
-
+import "../../css/styles.css"
 
 export default ({ children, title = 'Product Pages' }) => (
   <div>

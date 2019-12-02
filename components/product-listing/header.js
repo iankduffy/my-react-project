@@ -2,9 +2,12 @@ import { useContext, useState } from 'react';
 import { CartContext } from './context/cart-context';
 import MiniBag from './minibag';
 import Link from 'next/link'
+import { UserContext } from '../product-listing/user-context'
+import { auth } from 'firebase';
 
 const Header = (props) => {
   let [state, setState] = useContext(CartContext);
+	let [currentUser, setUser] = useContext(UserContext);
   let minbagVisable = false
 
   let [minibagVisable, newMinibagVisable] = useState(minbagVisable)
@@ -15,15 +18,18 @@ const Header = (props) => {
         <h1 className="h3 u-pad-b-sm">Beer Shop Name</h1>
         <nav className="col-8 u-flex-self--end">
           <ul className="o-nav o-nav--store container container__row">
-            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing"}} as={`/product-listing`}>Home</Link></li>
-            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/category/[pid]"}} as={`/product-listing/category/all`}><a>Category</a></Link></li>
-            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/category/[pid]"}} as={`/product-listing/category/all`}><a>Category</a></Link></li>
-            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/category/[pid]"}} as={`/product-listing/category/all`}><a>All</a></Link></li>
-            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/product-listing/wishlist"}}><a>Wishlist</a></Link></li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/"}} as={`/`}>Home</Link></li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/category/[pid]"}} as={`/category/all`}><a>Category</a></Link></li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/category/[pid]"}} as={`/category/all`}><a>Category</a></Link></li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/category/[pid]"}} as={`/category/all`}><a>All</a></Link></li>
+            <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/wishlist"}}><a>Wishlist</a></Link></li>
             <li className="u-pad-h-md u-pad-v-sm o-nav__link u-pos-rel u-t-cen" onMouseEnter={() => {newMinibagVisable(true)}} onMouseLeave={() => {newMinibagVisable(false)}}>
               <h4>MiniBag</h4>
              <div>{state.cart.length}</div>
               {minibagVisable ? <MiniBag cart={state.cart}/> : "" }
+            </li>
+            <li className="u-pad-h-md o-nav__link">
+              {currentUser ? <Link href={{pathname: "/sign-in"}}><a>Sign In</a></Link> : <div onClick={() => auth.signOut()}>Sign Out</div> }
             </li>
           </ul>
         </nav>
