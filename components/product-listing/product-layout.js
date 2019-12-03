@@ -3,7 +3,7 @@ import Head from 'next/head'
 // import { CartContextProvider } from '../../components/product-listing/context/cart-context';
 import Header from '../../components/product-listing/header'
 import "../../css/styles.css"
-import { auth } from '../../lib/firebase/firebase'
+import { auth, createUserProfileDocument } from '../../lib/firebase/firebase'
 import { useContext, useEffect } from 'react'
 import { UserContext } from '../product-listing/user-context'
 
@@ -18,14 +18,23 @@ export default ({ children, title = 'Product Pages' }) => {
   }, []);
 
 	function onAuthStateChange() {
-		return auth.onAuthStateChanged(user => {
+		return auth.onAuthStateChanged(async user => {
 			if (user) {
-				setUser(user)
-				console.log("The user is logged in");
+        const userRef = await createUserProfileDocument(user)
+
+        userRef.onSnapshot(snapShot => {
+          setUser({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          })
+        })
 			} else {
-				setUser('')
-				console.log("The user is not logged in");
-			}
+				setUser(null)
+      }
+      
+      console.log(currentUser)
 		});
 	}
 

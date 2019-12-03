@@ -1,6 +1,4 @@
 import { createContext, useState } from 'react';
-import Cookies from 'js-cookie' 
-import { auth } from '../../lib/firebase/firebase'
 
 export const UserContext = createContext([{}, () => {}]);
 

@@ -10,54 +10,31 @@ const SigninForm = () => {
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 
-	const handleEmail = (event) => {
-		const { value, name } = event.target;
-		setEmail(value)
-	}	
-
-	const handlePassword = (event) => {
-		const { value, name } = event.target;
-		setPassword(value)
-		console.log({currentUser})
-	}
-
-	// useEffect(() => {
-  //   const unsubscribe = onAuthStateChange();
-  //   return () => {
-  //     unsubscribe();
-  //   };
-  // }, []);
-
-	// function onAuthStateChange() {
-	// 	return auth.onAuthStateChanged(user => {
-	// 		if (user) {
-	// 			setUser(user)
-	// 			console.log("The user is logged in");
-	// 		} else {
-	// 			setUser('')
-	// 			console.log("The user is not logged in");
-	// 		}
-	// 	});
-	// }
-
 	return(
-		<div className="col-6">
+		<div className="col-5">
+			<h3>Sign In</h3>
 			<FormInput    
 			name='email'
 			type='email'
-			handleChange={handleEmail}
+			handleChange={setEmail}
 			value={email}
 			label='email'
+			placeholder='email'
+			className="col-12 u-pad-v-sm u-pad-h-sm"
 			required />
 			<FormInput    
 			name='password'
 			type='password'
-			handleChange={handlePassword}
+			handleChange={setPassword}
 			value={password}
 			label='password'
+			placeholder='password'
+			className="col-12 u-pad-v-sm u-pad-h-sm"
 			required />
-			<button className="c-btn-category col-4">Set Email</button>
-      <button className="c-btn-category col-4" onClick={signInWithGoogle}>Sign In With Google</button>
+			<div className="container container__row container--space-between u-pad-t-sm">
+				<button className="c-btn-category col-6">Sign In</button>
+				<button className="c-btn-category col-5" onClick={signInWithGoogle}>Sign In With Google</button>
+			</div>
 		</div>
 	)
 };

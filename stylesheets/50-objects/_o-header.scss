@@ -12,9 +12,16 @@ header {
     color: $white;
     border-top: 15px solid $black;
   }
+
   & .header{
     &__logo{
       height: 60px;
     }
+  }
+  
+  & .header--sub{
+    background: #007A5A;
+    display: flex;
+    justify-content: center;
   }
 }

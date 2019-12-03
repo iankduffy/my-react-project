@@ -1,17 +1,10 @@
-const FormInput = ({ handleChange, label, ...otherProps }) => {
+const FormInput = ({ handleChange, label, name, containerClass, ...otherProps }) => {
 
   return (
-  <div className='group'>
-    <input className='form-input' onChange={handleChange} {...otherProps} />
+  <div className={`${containerClass ? containerClass : ''} o-input u-pad-v-xs `}>
     {label ? (
-      <label
-        className={`${
-          otherProps.value.length ? 'shrink' : ''
-        } form-input-label`}
-      >
-        {label}
-      </label>
-    ) : null}
+      <label htmlFor={name} className="o-input--label u-pad-v-xs">{label}:</label>  ) : null}
+      <input id={name} className='o-input--input' onChange={(e) => handleChange(e.target.value)} {...otherProps} />
   </div>
   )
 };
