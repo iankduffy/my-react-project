@@ -3090,6 +3090,10 @@ header .header--sub {
   cursor: pointer;
 }
 
+.o-section {
+  background: #fff;
+}
+
 .c-screen {
   min-height: 80vh;
 }

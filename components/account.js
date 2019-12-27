@@ -2,10 +2,11 @@ import { useContext } from 'react';
 import { UserContext } from './product-listing/user-context'
 
 const AccountPage = () => {
-	let [currentUser, setUser] = useContext(UserContext);
+  let [currentUser, setUser] = useContext(UserContext);
+  console.log({currentUser})
 	return(
 		<div className="container__row container--space-between">
-      <div className="col-3">
+      <div className="col-3 o-section">
         <div className="col-12 u-t-cen">
           <h4>{ currentUser.displayName }</h4>
           <p>{ currentUser.email }</p>
