@@ -29,8 +29,8 @@ const SignUpForm = () => {
 	}
 
 	return(
-		<div className="col-5">
-			<h3>Sign Up</h3>
+		<div className="col-5 o-form u-pad-h-md u-pad-v-md">
+			<h3 className="u-mar-b-md">Sign Up</h3>
 			<form onSubmit={handleSubmit}>
       <div className="container__row">
         <FormInput    
@@ -40,7 +40,7 @@ const SignUpForm = () => {
         value={firstName}
         label='first name'
         placeholder='first name'
-        className="col-12 u-pad-v-sm u-pad-h-sm"
+        className="col-12 u-pad-v-sm"
         containerClass="col-5"
         required />
         <FormInput    
@@ -50,7 +50,7 @@ const SignUpForm = () => {
         value={lastName}
         label='last name'
         placeholder='last name'
-        className="col-12 u-pad-v-sm u-pad-h-sm"
+        className="col-12 u-pad-v-sm"
         containerClass="col-5"
         required />
       </div>
@@ -61,7 +61,7 @@ const SignUpForm = () => {
 				value={email}
 				label='email'
 				placeholder='email'
-				className="col-10 u-pad-v-sm u-pad-h-sm"
+				className="col-10 u-pad-v-sm"
 				required />
 				<FormInput    
 				name='password'
@@ -70,7 +70,7 @@ const SignUpForm = () => {
 				value={password}
 				label='password'
 				placeholder='password'
-				className="col-10 u-pad-v-sm u-pad-h-sm"
+				className="col-10 u-pad-v-sm"
 				required />
 				<FormInput    
 				name='confirm_password'
@@ -79,9 +79,9 @@ const SignUpForm = () => {
 				value={passwordConfirm}
 				label='Confirm password'
 				placeholder='Confirm password'
-				className="col-10 u-pad-v-sm u-pad-h-sm"
+				className="col-10 u-pad-v-sm"
 				required />
-				<button type="submit" className="c-btn-category col-10 u-mar-t-sm">Set Email</button>
+				<button type="submit" className="c-btn-category col-12 u-mar-t-sm">Create Account</button>
 			</form>
 		</div>
 	)

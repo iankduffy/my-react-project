@@ -25,6 +25,20 @@ const paragraph = () =>
   random: Math.random
 })
 
+const review = () => 
+  loremHipsum({
+  count: 1,                      // Number of words, sentences, or paragraphs to generate.
+  units: 'sentence',
+  sentenceLowerBound: 5,         // Minimum words per sentence.
+  sentenceUpperBound: 15,        // Maximum words per sentence.
+  paragraphLowerBound: 3,        // Minimum sentences per paragraph.
+  paragraphUpperBound: 7,        // Maximum sentences per paragraph.
+  format: 'plain',               // Plain text or html// Custom word dictionary. Uses dictionary.words (in lib/dictionary.js) by default.,
+  random: Math.random
+})
+
+const typesOfProducts = ["ALE", "STOUT", "PILSNER", "CIDER"]
+
 const AMMOUNTOFPRODUCTS = 21
 
 let productData = []
@@ -49,7 +63,8 @@ const createProductData = () => {
       price: "£5.00",
       rating: Math.floor(Math.random() * (5 - 0) + 0), 
       productImages: ["/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png"],
-      reviews: []
+      reviews: [review()], 
+      type: typesOfProducts[Math.floor(Math.random() * (4 - 0) + 0)]
     }
     productData = [...productData, data]
   }
