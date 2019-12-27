@@ -2882,11 +2882,6 @@ header {
   position: relative;
 }
 
-header.header--default {
-  background: #223a57;
-  color: #fff;
-}
-
 header.header--store {
   background: #00B987;
   color: #fff;
@@ -3005,13 +3000,12 @@ header .header--sub {
   text-transform: uppercase;
 }
 
-.o-minibag {
+.o-dropdown {
   position: absolute;
   width: 400px;
   height: 70vh;
   right: 0;
   background: #fff;
-  margin-top: 15px;
   color: #282828;
   cursor: auto;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.05);
@@ -3019,13 +3013,13 @@ header .header--sub {
   text-align: left;
 }
 
-.o-minibag--container {
+.o-dropdown--container {
   height: 100%;
   overflow: scroll;
   width: 100%;
 }
 
-.o-minibag--item {
+.o-dropdown--item {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3039,18 +3033,18 @@ header .header--sub {
           align-items: stretch;
 }
 
-.o-minibag--item__details {
+.o-dropdown--item__details {
   height: auto;
 }
 
-.o-minibag--heading {
+.o-dropdown--heading {
   width: 100%;
   color: #fff;
   background: #282828;
   text-align: center;
 }
 
-.o-minibag--footer {
+.o-dropdown--footer {
   width: 100%;
   color: #282828;
   background: #EEEEEE;
@@ -3058,7 +3052,7 @@ header .header--sub {
   margin-top: 20px;
 }
 
-.o-minibag--btn {
+.o-dropdown--btn {
   display: block;
   padding: 10px 0;
   cursor: pointer;
@@ -3217,6 +3211,20 @@ header .header--sub {
   transition: 400ms;
   background: #707070;
   color: #fff;
+}
+
+.c-btn--menu {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #707070;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.c-btn--menu:hover {
+  background: #eee;
 }
 
 .c-half:nth-of-type(1 + 2) {
@@ -3395,6 +3403,10 @@ header .header--sub {
 
 .u-full-height {
   min-height: 100vh;
+}
+
+.u-pad-t-0-imp {
+  padding-top: 0 !important;
 }
 
 .u-order-1 {

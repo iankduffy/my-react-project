@@ -18,12 +18,12 @@ const MiniBag = (props) => {
   }
   
   return (
-    <div className="o-minibag container__column">
-      <h4 className="o-minibag--heading u-pad-v-md">Your MiniBag</h4>
-      <div className="o-minibag--container u-pad-h-sm u-pad-v-sm">
+    <div className="o-dropdown container__column">
+      <h4 className="o-dropdown--heading u-pad-v-md">Your MiniBag</h4>
+      <div className="o-dropdown--container u-pad-h-sm u-pad-v-sm">
         {cartItems.map((product, i) => <MiniBagItem product={product} key={i} removeItem={removeItem}/>) }
       </div>
-      <h5 className="o-minibag--footer u-pad-v-md">PROCEED TO CHECKOUT</h5>
+      <h5 className="o-dropdown--footer u-pad-v-md">PROCEED TO CHECKOUT</h5>
     </div>
   )
 };

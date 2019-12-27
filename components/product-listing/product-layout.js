@@ -6,6 +6,8 @@ import "../../css/styles.css"
 import { auth, createUserProfileDocument } from '../../lib/firebase/firebase'
 import { useContext, useEffect } from 'react'
 import { UserContext } from '../product-listing/user-context'
+import Cookies from 'js-cookie';
+
 
 export default ({ children, title = 'Product Pages' }) => {
 	let [currentUser, setUser] = useContext(UserContext);
@@ -33,8 +35,10 @@ export default ({ children, title = 'Product Pages' }) => {
 			} else {
 				setUser(null)
       }
-      
       console.log(currentUser)
+      console.log("hit")
+
+      Cookies.set('user', {currentUser})
 		});
 	}
 

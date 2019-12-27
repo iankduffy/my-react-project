@@ -2,11 +2,6 @@ header {
   width: 100%; 
   position: relative;
 
-  &.header--default {
-    background: $primary-color;
-    color: #fff;
-  }
-
   &.header--store {
     background: #00B987;
     color: $white;

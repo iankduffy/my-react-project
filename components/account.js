@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { UserContext } from '../components/product-listing/user-context'
+import { UserContext } from './product-listing/user-context'
 
 const AccountPage = () => {
 	let [currentUser, setUser] = useContext(UserContext);

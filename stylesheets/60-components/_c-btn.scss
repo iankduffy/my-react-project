@@ -73,4 +73,17 @@
       color: $white;
     }
   }
+
+  &--menu {
+    width: 100%;
+    display: block; 
+    border-bottom: 1px solid #707070;
+    text-align: center;
+    cursor: pointer;
+    transition: 500ms;
+    
+    &:hover {
+      background: #eee;
+    }
+  }
 }
