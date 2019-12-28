@@ -10,9 +10,9 @@
   "scripts": {
     "dev": "node ssr-server.js",
     "build": "next build",
-    "start": "next start",
     "deploy": "yarn build", 
-    "heroku-postbuild": "next build"
+    "heroku-postbuild": "next build",
+    "start": "next start -p $PORT"
   },
   "keywords": [],
   "author": "",
