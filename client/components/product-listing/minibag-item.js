@@ -6,7 +6,7 @@ import Cookies from 'js-cookie';
 import { WishlistContext } from '../../components/product-listing/context/wishlist-context'
 
 const MiniBagItem = (props) => {
-  const product = ProductData[props.product.productId]
+  const product = ProductData.productData[props.product.productId]
   const [state, setState] = useContext(CartContext);
   const [QTY, setQTY] = useState(props.product.qty);
   const [wishlist, setWishlist] = useContext(WishlistContext);

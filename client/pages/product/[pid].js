@@ -7,7 +7,7 @@ const Pdp = () => {
   const router = useRouter()
   const { pid } = router.query
   
-  const data = ProductData[pid]
+  const data = ProductData.productData[pid]
 
   return (
     <div>

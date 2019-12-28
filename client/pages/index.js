@@ -33,7 +33,7 @@ const ProductListing = () => (
 					<div className="container u-pad-v-lg col-12 u-pad-h-md">
 						<h3>Top Sellers</h3>
 						<div className="container container__row container--space-between o-flex-al-stretch u-t-cen">
-            	{ProductData.slice(0, 8).map(product => <ProductLink product={product} key={product.id}/>)}
+            	{ProductData.productData.slice(0, 8).map(product => <ProductLink product={product} key={product.id}/>)}
           	</div>
 					</div>
 				</main>

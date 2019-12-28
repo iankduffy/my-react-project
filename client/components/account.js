@@ -3,7 +3,6 @@ import { UserContext } from './product-listing/user-context'
 
 const AccountPage = () => {
   let [currentUser, setUser] = useContext(UserContext);
-  console.log({currentUser})
 	return(
 		<div className="container__row container--space-between">
       <div className="col-3 o-section">
@@ -13,7 +12,7 @@ const AccountPage = () => {
         </div>
       </div>
       <div className="col-8">
-        <div className="col-12">
+        <div className="col-12 o-section">
           <h3>Order History</h3>
         </div>
       </div>

@@ -39,12 +39,12 @@ const review = () =>
 
 const typesOfProducts = ["ALE", "STOUT", "PILSNER", "CIDER"]
 
-const AMMOUNTOFPRODUCTS = 21
+const AMMOUNTOFPRODUCTS = 50
 
 let productData = []
 
 const writeFile = () => { 
-  fs.writeFile("./data/product-data.json", JSON.stringify(productData), 'utf8', function (err) {
+  fs.writeFile("./data/product-data.json", JSON.stringify({"productData": productData}), 'utf8', function (err) {
   if (err) {
       console.log("An error occured while writing JSON Object to File.");
       return console.log(err);

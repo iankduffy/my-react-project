@@ -13,7 +13,7 @@ const ProductListing = () => {
 				<div className="container u-mar-v-lg">
 					<h2 className="u-t-cen">Wishlist</h2>
 					<div className="container container__row u-t-cen">
-						{ProductData.slice(0, 5).map(product => <ProductLink product={product} key={product.id}/>)}
+						{ProductData.productData.slice(0, 5).map(product => <ProductLink product={product} key={product.id}/>)}
 					</div>
 				</div>
 			</Layout>

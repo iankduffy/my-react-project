@@ -10,7 +10,7 @@ const ProductListing = () => (
 			<div className="col-9 u-t-cen">
         <h2>Category</h2>
           <div className="container container__row o-flex-al-stretch">
-            {ProductData.map(product => <ProductLink product={product} key={product.id}/>)}
+            {ProductData.productData.map(product => <ProductLink product={product} key={product.id}/>)}
           </div>
       </div>
 		</main>
