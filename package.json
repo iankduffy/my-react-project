@@ -8,10 +8,11 @@
     "yarn": "1.19.1"
   },
   "scripts": {
-    "dev": "cd client && node ssr-server.js",
-    "server": "nodemon server.js",
-    "build": "cd client && next build",
-    "start": "node server.js"
+    "dev": "node ssr-server.js",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "yarn build", 
+    "heroku-postbuild": "next build"
   },
   "keywords": [],
   "author": "",
