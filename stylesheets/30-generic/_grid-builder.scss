@@ -55,6 +55,19 @@
   }
 }
 
+.u-dis-hid\@md-down {
+  @include breakpoint-max(md) {
+    display: none !important;
+  }
+}
+
+.u-colum\@md-down {
+  @include breakpoint-max(md) {
+    flex-direction: column;
+  }
+}
+
+
 .u-flex-grow {
   flex-grow: 1;
 }

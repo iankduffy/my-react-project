@@ -13,37 +13,37 @@ const ProductForm = (props) => {
   let alreadyInCart = state.cart.find((cartItem) => cartItem.productId === product.id)
 
   let addToCart = () => {
-    console.log({state})
+    // console.log({state})
     if (alreadyInCart) {
-      console.log("in cart")
+      // console.log("in cart")
       mergeItem(alreadyInCart)
     } else {
       let newProduct = {
         productId: product.id,
         qty: parseInt(selectedQTY)
       }
-      console.log("echo") 
+      // console.log("echo") 
       setState({cart: [...state.cart, newProduct]})
       Cookies.set('cart', {cart: [...state.cart, newProduct]})
     }
   }
 
   let mergeItem = (cartItem) => {
-    console.log(cartItem)
+    // console.log(cartItem)
     cartItem.qty = Math.min((cartItem.qty + selectedQTY), 12)
-    console.log(cartItem.qty)
+    // console.log(cartItem.qty)
     setState({cart: [...state.cart]})
     Cookies.set('cart', {cart: [...state.cart]})
   }
 
   let addToWishlist = () => {
 
-    console.log(wishlist)
+    // console.log(wishlist)
     // console.log({newProduct})
 
     setWishlist({wishlist: [1]})
     // Cookies.set('wishlist', [wishlist, 1])
-    console.log({wishlist})
+    // console.log({wishlist})
   }
 
   return (
@@ -54,12 +54,12 @@ const ProductForm = (props) => {
         </div>
       </div>
       <div className="container__row container--space-between u-mar-b-md">
-        <div className="col-9 u-pad-r-sm"> 
+        <div className="col-12"> 
           <button className="c-btn-product c-btn--dark" onClick={() => addToCart()}>Add To Bag</button>
         </div>
-        <div className="col-3">
+        {/* <div className="col-3">
           <button className="c-btn-product" onClick={() => addToWishlist()}>Save For Later</button>
-        </div>
+        </div> */}
       </div>
     </div>
   )

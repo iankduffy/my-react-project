@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "node ssr-server.js",
     "build": "next build",
-    "deploy": "yarn build", 
+    "deploy": "yarn build",
     "heroku-postbuild": "next build",
     "start": "next start -p $PORT"
   },
@@ -21,14 +21,17 @@
     "@svgr/webpack": "^4.3.3",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "firebase": "^7.5.0",
     "js-cookie": "^2.2.1",
     "next": "^9.1.1",
     "next-cookies": "^1.1.3",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-stripe-checkout": "^2.6.3"
   },
   "devDependencies": {
     "lorem-hipsum": "^0.1.7"

@@ -7,8 +7,8 @@ const AccountPage = () => {
 		<div className="container__row container--space-between">
       <div className="col-3 o-section">
         <div className="col-12 u-t-cen">
-          <h4>{ currentUser.displayName }</h4>
-          <p>{ currentUser.email }</p>
+          <h4>{ currentUser.displayName !== undefined ? currentUser.displayName : "" }</h4>
+          <p>{ currentUser.email !== undefined ? currentUser.email : "" }</p>
         </div>
       </div>
       <div className="col-8">

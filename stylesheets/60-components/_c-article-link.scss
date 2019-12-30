@@ -1,0 +1,6 @@
+.c-article-link {
+  @include breakpoint-max(md) {
+    flex-direction: column;
+    width: 100%;
+  }
+}

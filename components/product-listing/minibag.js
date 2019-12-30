@@ -3,6 +3,7 @@ import MiniBagItem from '../product-listing/minibag-item'
 import { useContext, useState } from 'react';
 import { CartContext } from './context/cart-context'
 import Cookies from 'js-cookie';
+import Link from 'next/link'
 
 const MiniBag = (props) => {
   const cartItems = props.cart
@@ -23,7 +24,7 @@ const MiniBag = (props) => {
       <div className="o-dropdown--container u-pad-h-sm u-pad-v-sm">
         {cartItems.map((product, i) => <MiniBagItem product={product} key={i} removeItem={removeItem}/>) }
       </div>
-      <h5 className="o-dropdown--footer u-pad-v-md">PROCEED TO CHECKOUT</h5>
+      <Link href="/checkout"><a className="o-dropdown--footer h5 u-pad-v-md u-pad-t-md">PROCEED TO CHECKOUT</a></Link>
     </div>
   )
 };

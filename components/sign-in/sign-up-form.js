@@ -14,7 +14,7 @@ const SignUpForm = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
-		
+		console.log({email})
 		if ( password !== passwordConfirm) {
 			return;
 		}

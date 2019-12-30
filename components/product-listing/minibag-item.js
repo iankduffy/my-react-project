@@ -25,7 +25,7 @@ const MiniBagItem = (props) => {
       productId: props.product.id
     }
 
-    console.log([...wishlist.wishlist, newProduct])
+    // console.log([...wishlist.wishlist, newProduct])
 
     // setWishlist({wishlist: [wishlist.wishlist]})
   }
@@ -34,7 +34,7 @@ const MiniBagItem = (props) => {
   <div className="o-dropdown--item container__row">
     <img src={product.productImages[0]} className="u-mar-sm col-4"/>
     <div className="container__column col-8 u-pad-h-sm o-dropdown--item__details">
-      <p className="u-t-b">{product.productName}</p>
+      <p className="u-t-b">{product.productName.toUpperCase()}</p>
       <p>{product.price}</p>
       <DropDown setParentState={updateQty} text="QTY" defaultValue={props.product.qty} optionsValue={[1,2,3,4,5,6,7,8,9,10,11,12]} optionsText={["QTY 1","QTY 2","QTY 3","QTY 4","QTY 5","QTY 6","QTY 7","QTY 8","QTY 9","QTY 10", "11", "12"]}/>
       <div className="u-mar-t-sm container__row">

@@ -17,9 +17,9 @@ const Header = () => {
   return (
     <header className="u-pad-t-sm header--store">
       <div className="container container__row  container__row--v-center container--space-between">
-        <h1 className="h3 u-pad-b-sm"><Link href={{pathname: "/"}} as={`/`}>Beer Shop Name</Link></h1>
+        <h1 className="h3 u-pad-b-sm u-t-cen@md col-12@md u-pad-v-md@sm"><Link href={{pathname: "/"}} as={`/`}>Beer Shop Name</Link></h1>
         <nav className="col-8 u-flex-self--end">
-          <ul className="o-nav o-nav--store container container__row">
+          <ul className="o-nav o-nav--store container container__row u-dis-hid@md-down">
             {/* <li className="u-pad-h-md o-nav__link"><Link href={{pathname: "/wishlist"}}><a>Wishlist</a></Link></li> */}
             <li className="u-pad-h-md u-pad-v-sm o-nav__link u-pos-rel u-t-cen" onMouseEnter={() => {newMinibagVisable(true)}} onMouseLeave={() => {newMinibagVisable(false)}}>
               <h4>MiniBag</h4>
@@ -27,17 +27,19 @@ const Header = () => {
               {minibagVisable ? <MiniBag cart={state.cart}/> : "" }
             </li>
             <li className="u-pad-h-md o-nav__link u-pos-rel" onMouseEnter={() => {newAccountMenuVisable(true)}} onMouseLeave={() => {newAccountMenuVisable(false)}}>
-              {currentUser ? <div className="u-pad-v-sm" >My Account</div> : <Link href={{pathname: "/sign-in"}}><a>Sign In</a></Link> }
+              {currentUser ? <Link href={{pathname: "/account"}}><a className="u-pad-v-sm">My Account</a></Link> : <Link href={{pathname: "/sign-in"}}><a>Sign In</a></Link> }
               {accountMenuVisable && currentUser ? <AccountMenu/> : "" }
             </li>
           </ul>
         </nav>
       </div>
-      <div className="header--sub">
+      <div className="header--sub u-dis-hid@md-down">
         <div className="container">
-          <ul className="o-nav container container__row u-pad-t-sm"> 
-            <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/all`}><a>Category</a></Link></li>
-            <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/all`}><a>Category</a></Link></li>
+          <ul className="o-nav container container__row u-pad-t-sm u-t-upper"> 
+            <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/ale`}><a>Ale</a></Link></li>
+            <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/stout`}><a>Stout</a></Link></li>
+            <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/pilsner`}><a>Pilsner</a></Link></li>
+            <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/cider`}><a>Cider</a></Link></li>
             <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/all`}><a>All</a></Link></li>
           </ul>
         </div>

@@ -39,7 +39,7 @@ const review = () =>
 
 const typesOfProducts = ["ALE", "STOUT", "PILSNER", "CIDER"]
 
-const AMMOUNTOFPRODUCTS = 50
+const AMMOUNTOFPRODUCTS = 150
 
 let productData = []
 
