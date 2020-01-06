@@ -50,7 +50,11 @@
 }
 
 .c-header--image {
-  min-height: 75vh;
-  background: #28CC8F;
-  color: $white
+  background-image: url(/header-image.png);
+  min-height: 65vh;
+  color: $white;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

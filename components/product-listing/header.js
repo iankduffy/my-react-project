@@ -15,7 +15,7 @@ const Header = () => {
   let [accountMenuVisable, newAccountMenuVisable] = useState(false)
 
   return (
-    <header className="u-pad-t-sm header--store">
+    <header className="u-pad-t-sm o-header">
       <div className="container container__row  container__row--v-center container--space-between">
         <h1 className="h3 u-pad-b-sm u-t-cen@md col-12@md u-pad-v-md@sm"><Link href={{pathname: "/"}} as={`/`}>Beer Shop Name</Link></h1>
         <nav className="col-8 u-flex-self--end">
@@ -33,7 +33,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <div className="header--sub u-dis-hid@md-down">
+      <div className="o-header--sub u-dis-hid@md-down">
         <div className="container">
           <ul className="o-nav container container__row u-pad-t-sm u-t-upper"> 
             <li className="u-pad-h-md o-nav__link u-pad-b-sm"><Link href={{pathname: "/category/[pid]"}} as={`/category/ale`}><a>Ale</a></Link></li>

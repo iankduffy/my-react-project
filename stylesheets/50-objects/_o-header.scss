@@ -1,12 +1,9 @@
-header {
+.o-header {
   width: 100%; 
   position: relative;
-
-  &.header--store {
-    background: #00B987;
-    color: $white;
-    border-top: 15px solid $black;
-  }
+  background: #fff;
+  color: $black;
+  border-top: 10px solid $black;
 
   & .header{
     &__logo{
@@ -14,9 +11,10 @@ header {
     }
   }
   
-  & .header--sub{
-    background: #007A5A;
+  &--sub{
+    border-top: 2px solid $black;
+    border-bottom: 2px solid $black;
     display: flex;
-    justify-content: center;
+    // justify-content: flex-start;
   }
 }

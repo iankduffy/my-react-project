@@ -22,6 +22,8 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "firebase": "^7.5.0",
     "js-cookie": "^2.2.1",
@@ -31,7 +33,8 @@
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-stripe-checkout": "^2.6.3"
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^7.14.0"
   },
   "devDependencies": {
     "lorem-hipsum": "^0.1.7"

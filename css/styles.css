@@ -2909,29 +2909,24 @@ h4,
   margin-bottom: 0.4rem;
 }
 
-header {
+.o-header {
   width: 100%;
   position: relative;
+  background: #fff;
+  color: #282828;
+  border-top: 10px solid #282828;
 }
 
-header.header--store {
-  background: #00B987;
-  color: #fff;
-  border-top: 15px solid #282828;
-}
-
-header .header__logo {
+.o-header .header__logo {
   height: 60px;
 }
 
-header .header--sub {
-  background: #007A5A;
+.o-header--sub {
+  border-top: 2px solid #282828;
+  border-bottom: 2px solid #282828;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .o-side-nav {
@@ -3162,9 +3157,19 @@ header .header--sub {
 }
 
 .c-header--image {
-  min-height: 75vh;
-  background: #28CC8F;
+  background-image: url(/header-image.png);
+  min-height: 65vh;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
 }
 
 .c-btn {
@@ -3418,6 +3423,11 @@ header .header--sub {
 
 .c-star--active svg {
   fill: goldenrod;
+}
+
+.c-article-link {
+  background: #282828;
+  color: #fff;
 }
 
 @media (max-width: 738px) {
