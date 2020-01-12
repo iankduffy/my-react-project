@@ -6,22 +6,19 @@ import ProductForm from '../../components/product-listing/product-form'
 // import CartProvider from '../../components/product-listing/context/cart-context';
 
 
-import "../../css/styles.css"
+// import "../../css/styles.css"
 
 const Pdp = (props) => {
-
   const data = props.product
 
-  // const [state, setState] = useContext(CartContext);
-  
   return (
       <div className="u-bg-grey">
          <div className="container container__row col-12 u-pad-v-lg container--space-between">
           <ProductImages ProductImages={data.productImages} />
-          <div className="c-product__info col-7 col-12@md u-mar-h-md@md">
+          <div className="c-product__info col-6 col-12@md u-mar-h-md@md">
             <div className="container__row  container__row--v-center container--space-between">
               <h2>{data.productName}</h2>
-              <p className="h3">{data.price}</p>
+              <p className="h3">£{data.price}</p>
             </div>
             <p className="col-12">{data.description}</p>
             <p className="col-12">{data.description}</p>

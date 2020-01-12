@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   max-width: $grid-length * 1px;
-
+  padding: 0 15px;
 
   &--fluid {
     margin: 0;
@@ -39,7 +39,6 @@
   .col-#{$i} {
     width: (100 / ($grid-cols / $i)) * 1%;
     flex: 0 1 (100 / ($grid-cols / $i)) * 1%;
-    // padding: 0 5px;
   }
 
   $sizesmq: xs, sm, md, lg; 
@@ -49,7 +48,6 @@
       @include breakpoint-max($mq) {
         width: (100 / ($grid-cols / $i)) * 1%;
         flex: 0 1 (100 / ($grid-cols / $i)) * 1%;
-        // padding: 0 5px;
       }
     }
   }
@@ -61,12 +59,17 @@
   }
 }
 
+.u-dis-hid\@md-up {
+  @include breakpoint-min(md) {
+    display: none !important;
+  }
+}
+
 .u-colum\@md-down {
   @include breakpoint-max(md) {
     flex-direction: column;
   }
 }
-
 
 .u-flex-grow {
   flex-grow: 1;

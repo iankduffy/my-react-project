@@ -3,6 +3,7 @@ import { CartContext } from './context/cart-context'
 import DropDown from "../dropdown-input"
 import Cookies from 'js-cookie' 
 import { WishlistContext } from '../../components/product-listing/context/wishlist-context'
+import { updatePrice } from '../../lib/cart-calucations'
 
 
 const ProductForm = (props) => {
@@ -10,7 +11,7 @@ const ProductForm = (props) => {
   const [state, setState] = useContext(CartContext);
   const [wishlist, setWishlist] = useContext(WishlistContext);
   let selectedQTY = 1
-  let alreadyInCart = state.cart.find((cartItem) => cartItem.productId === product.id)
+  let alreadyInCart = state.cart.products.find((cartItem) => cartItem.productId === product.id)
 
   let addToCart = () => {
     // console.log({state})
@@ -20,11 +21,13 @@ const ProductForm = (props) => {
     } else {
       let newProduct = {
         productId: product.id,
-        qty: parseInt(selectedQTY)
+        qty: parseInt(selectedQTY),
+        singlePrice: product.price 
       }
-      // console.log("echo") 
-      setState({cart: [...state.cart, newProduct]})
-      Cookies.set('cart', {cart: [...state.cart, newProduct]})
+
+      let newProductList = [...state.cart.products, newProduct]
+      setState({cart: { products: newProductList }, total: updatePrice(newProductList) })
+      Cookies.set('cart', {cart: { products: newProductList }, total: updatePrice(newProductList) })
     }
   }
 
@@ -32,8 +35,10 @@ const ProductForm = (props) => {
     // console.log(cartItem)
     cartItem.qty = Math.min((cartItem.qty + selectedQTY), 12)
     // console.log(cartItem.qty)
-    setState({cart: [...state.cart]})
-    Cookies.set('cart', {cart: [...state.cart]})
+    let newProductList = [...state.cart.products]
+    
+    setState({cart: { products: newProductList}, total: updatePrice(newProductList)})
+    Cookies.set('cart', {cart: { products: newProductList}, total: updatePrice(newProductList)})
   }
 
   let addToWishlist = () => {

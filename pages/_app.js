@@ -19,7 +19,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     
     return (
-      <div> 
+      < > 
         <UserContextProvider>
           <CartContextProvider>
             <WishlistContextProvider>
@@ -27,7 +27,7 @@ class MyApp extends App {
             </WishlistContextProvider>
           </CartContextProvider>
         </UserContextProvider>
-      </div>
+      </ >
     )
   }
 }

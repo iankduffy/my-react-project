@@ -1,32 +1,25 @@
 .o-nav {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 
   li {
-    padding-bottom: 20px 10px;
-  }
+    cursor: pointer;
 
-  &--store {
-    justify-content: flex-end;
-    align-items: flex-end;
+    .o-nav__link{
+      margin: 0 5px; 
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: block;
 
-    li {
-      cursor: pointer;
+      a {
+        display: block;
+      }
 
-      &.o-nav__link{
-        border-bottom: 5px solid $black;
-        margin: 0 5px;
-
-        a {
-          display: block;
-          padding-top: 10px;
-          padding-bottom: 20px;
-        }
-
-        &:hover {
-          background: $black; 
-          color: #fff;
-        }
+      &:hover {
+        background: $black; 
+        color: #fff;
       }
     }
   }

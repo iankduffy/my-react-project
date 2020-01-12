@@ -4,8 +4,12 @@
   text-decoration: none;
   color: $black;
   background: $white;
-  flex: 0 1 23%;
+  flex: 1 1 23%;
   min-width: 175px;
+  max-width: 47%;
+  @include breakpoint-min(md) {
+    max-width: 23%;
+  }
 
   a {
     display: flex;
@@ -45,6 +49,10 @@
     font-size: 1rem;
     text-transform: uppercase;
     color: $primary-color;
+  }
+
+  &__image-sidebar {
+    max-height: 100px;
   }
 }
 

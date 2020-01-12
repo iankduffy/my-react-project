@@ -9,8 +9,6 @@ const CategoryPage = ({products}) => {
   const router = useRouter()
 	const { pid } = router.query
 
-	// console.log({products})
-
 	const [productList, setProductList] = useState(products)
 
 	const searchProducts = (search) => {
@@ -23,20 +21,24 @@ const CategoryPage = ({products}) => {
   }, [products]);
 	
   return (
-	<div>
-		<Layout title={`${pid} | Product Listing`}>
-			<main className="container container__row col-12 u-pad-v-lg u-colum@md-down">
-				<SideBar onSearch={searchProducts}/>
-				<div className="col-9 col-12@md u-t-cen">
-					<h2>Category: {pid} ({products.length})</h2>
-						<div className="container container__row o-flex-al-stretch container--center">
-							{productList.map(product => <ProductLink product={product} key={product.id}/>)}
-						</div>
+		< >
+			<Layout title={`${pid.toUpperCase()} | Product Listing`}>
+				<div className="container__fluid u-t-cen u-pad-v-lg c-cat--image">
+					<h2 className="u-mar-b-0">{pid} Products ({products.length})</h2>
 				</div>
-			</main>
-		</Layout>
-	</div>
-)
+				<main className="container container__row col-12 u-pad-v-md u-colum@md-down">
+					<div className="container__row">
+						<SideBar onSearch={searchProducts}/>
+						<div className="col-9 col-12@md u-t-cen">
+							<div className="container__row o-flex-al-stretch u-pad-h-0@md u-pad-h-md">
+								{productList.map(product => <ProductLink product={product} key={product.id}/>)}
+							</div>
+						</div>
+					</div>
+				</main>
+			</Layout>
+		</ >
+	)
 };
   
 // export default CategoryPage;

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Ratings from "../product-listing/rating"
 
 const ProductLink = (props) => (
-  <div className="c-product col-3 col-12@md u-pad-h-sm u-mar-v-sm u-mar-h-xs u-pad-v-sm">
+  <div className="c-product col-3 col-12@md u-pad-h-sm u-mar-b-md u-mar-h-0@md u-mar-h-xs u-pad-v-sm">
     <Link href={{pathname: "/product/[pid]"}} as={`/product/${props.product.id}`} >
       <a>
         <img src="/Beer-Bottle.png" className="u-mar-sm"></img>

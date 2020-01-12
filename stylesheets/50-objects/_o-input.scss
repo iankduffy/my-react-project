@@ -30,7 +30,8 @@
     opacity: 0.5;
     font-weight: 800;
     text-transform: uppercase;
-    padding-left: 0rem
+    padding-left: 0rem;
+    pointer-events: none;
   }
 
   &--input {

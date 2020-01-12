@@ -35,8 +35,6 @@ export default ({ children, title = 'Product Pages' }) => {
 			} else {
 				setUser(null)
       }
-      // console.log(currentUser)
-      // console.log("hit")
 
       Cookies.set('user', {currentUser})
 		});

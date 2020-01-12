@@ -46,8 +46,8 @@ let productData = []
 const writeFile = () => { 
   fs.writeFile("./data/product-data.json", JSON.stringify({"productData": productData}), 'utf8', function (err) {
   if (err) {
-      console.log("An error occured while writing JSON Object to File.");
-      return console.log(err);
+    console.log("An error occured while writing JSON Object to File.");
+    return console.log(err);
   }
 
   console.log("JSON file has been saved.");
@@ -60,7 +60,7 @@ const createProductData = () => {
       productName: title(), 
       description: paragraph(),
       breweryInfo: paragraph(),
-      price: "£5.00",
+      price: (Math.random() * (4 - 0) + 2).toFixed(2),
       rating: Math.floor(Math.random() * (5 - 0) + 0), 
       productImages: ["/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png", "/Beer-Bottle.png"],
       reviews: [review()], 

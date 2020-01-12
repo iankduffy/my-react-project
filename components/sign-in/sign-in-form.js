@@ -1,6 +1,6 @@
 import { auth, signInWithGoogle } from '../../lib/firebase/firebase'
 import FormInput from '../form-input'
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext } from 'react';
 import { UserContext } from '../product-listing/user-context'
 
 const SigninForm = () => {
