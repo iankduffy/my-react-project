@@ -28,7 +28,7 @@ const Header = () => {
               </div>
             </li>
             <li className="u-pos-rel" onMouseEnter={() => {newAccountMenuVisable(true)}} onMouseLeave={() => {newAccountMenuVisable(false)}}>
-              {currentUser ? <Link href={{pathname: "/account"}}><a className="u-pad-v-sm u-pad-h-md o-nav__link">My Account</a></Link> : <Link href={{pathname: "/sign-in"}}><a className="u-pad-h-md o-nav__link ">Sign In</a></Link> }
+              {currentUser ? <Link href={{pathname: "/account"}}><a className="u-pad-v-sm u-pad-h-md o-nav__link">My Account</a></Link> : <Link href={{pathname: "/sign-in"}}><a className="u-pad-h-md u-pad-v-sm o-nav__link">Sign In</a></Link> }
               {accountMenuVisable && currentUser ? <AccountMenu/> : "" }
             </li>
           </ul>
